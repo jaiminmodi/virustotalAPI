@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2 style="font-family:courier;"><b>Results</b></h2>
+    <hr>
+    <br />
+    <table class="centered thick-border">
+        <tr>
+            <th>MD5</th>
+            <th>Fortinet Detection Engine</th>
+            <th>Number of detected engines</th>
+            <th>Scan Date</th>
+        </tr>
+        {% for data in get_data %}
+            <tr>
+                <td>{{ data['md5'] }}</td>
+                <td>{{ data['detection_name'] }}</td>
+                <td>{{ data['positives'] }}</td>
+                <td>{{ data['scan_date'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

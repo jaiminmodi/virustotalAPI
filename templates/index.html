@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virus Total API</title>
+</head>
+<body>
+    <h3>File Upload</h3>
+
+    <form action="getfile" method="post" enctype="multipart/form-data">
+        <div>
+            API Key: <input type="text" name="api_key" required/>
+            <br>
+            File Upload: <input type="file" name="myfile" accept=".txt" required/>
+        </div>
+        <div>
+            <input type="submit" name= "form" value="Submit" />
+        </div>
+    </form>
+</body>
+</html>
